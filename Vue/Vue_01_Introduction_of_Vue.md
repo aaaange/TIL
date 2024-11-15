@@ -72,3 +72,20 @@
 - 인자는 어떤 타입도 가능
 - 템플릿의 참조에 접근하려면 setup함수에서 선언 및 반환 필요
 - 편의상 템플릿에서 ref를 사용할 때는 .value를 작성할 필요 없음(automatically unwrapped)
+
+## Vue 기본 구조
+- createApp()에 전달되는 객체는 Vue 컴포넌트
+- 컴포넌트 상태 setup() 함수 내에서 선언되어야 하며 객체를 반환해야 한다.
+### 템플릿 렌더링
+- 반환되는 객체의 속성은 템플릿에서 사용할 수 있음
+- Mustache syntax(콧수염 구문)를 사용하여 메세지 값을 기반으로 동적 텍스트를 렌더링
+    ```html
+    <h1>{{ message }}</h1>
+    ```
+- 콘텐츠는 식별자나 경로에만 국한되지 않으면 유효한 JavaScript 표현식을 사용할 수 있음
+    ```html
+    <h1>{{ message.split('').reverse().join() }}</h1>
+    ```
+### Event Listeners in Vue
+'v-on' directive를 사용하여 DOM 이벤트를 수신할 수 있음
+- 함수 내에서 반응형 변수를 변경하여 구성 요소 상태를 업데이트
