@@ -89,3 +89,21 @@
 ### Event Listeners in Vue
 'v-on' directive를 사용하여 DOM 이벤트를 수신할 수 있음
 - 함수 내에서 반응형 변수를 변경하여 구성 요소 상태를 업데이트
+
+## Template Syntax
+DOM을 기본 구성 요소 인서튼스의 데이터에 선언적으로 바인딩(Vue instance와 DOM을 연결)할 수 있는 HTML 기반 템플릿 구문(확장된 문법 제공)을 사용
+
+### Template Syntax 종류
+1. Text Interpolation
+2. Raw HTML
+3. Attribute Bindings
+4. JavaScript Expressions
+
+### 1. Text Interpolation
+```
+<p>Message: {{ msg }}</p>
+```
+- 데이터 바인딩의 가장 기본적인 형태
+- 이중 중괄호 구문(콧수염 구문)을 사용
+- 콧수염 구문은 해당 구성 요소 인스턴스의 msg 속성 값으로 대체
+- msg 속성이 변경될 때마다 업데이트 됨
