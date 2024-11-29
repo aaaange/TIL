@@ -107,3 +107,22 @@ DOM을 기본 구성 요소 인서튼스의 데이터에 선언적으로 바인�
 - 이중 중괄호 구문(콧수염 구문)을 사용
 - 콧수염 구문은 해당 구성 요소 인스턴스의 msg 속성 값으로 대체
 - msg 속성이 변경될 때마다 업데이트 됨
+### 2. Raw HTML
+```html
+<div v-html='rawHtml'></div>
+```
+```javascript
+const rawHtml = ref('<span style="color:red">This should be red.</span>')
+```
+- 콧수염 구문은 데이터를 일반 텍스트로 해석하기 때문에 실제 HTML을 출력하려면 v-html을 사용해야 함
+### 3. Attribute Bindings
+```jsx
+<div v-bind:id"dynamicId"></div>
+```
+
+```jsx
+const dynmaicId = ref('my-id')
+```
+- 콧수염 구문은 HTML 속성 내에서 사용할 수 없기 때문에 v-bind를 사용
+- HTML의 id 속성 값을 vue의 dynamicId 속성과 동기화 되도록 함
+- 바인딩 값이 null이나 undefind인 경우 렌더링 요소에서 제거됨
