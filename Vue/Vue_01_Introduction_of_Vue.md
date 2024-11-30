@@ -126,3 +126,15 @@ const dynmaicId = ref('my-id')
 - 콧수염 구문은 HTML 속성 내에서 사용할 수 없기 때문에 v-bind를 사용
 - HTML의 id 속성 값을 vue의 dynamicId 속성과 동기화 되도록 함
 - 바인딩 값이 null이나 undefind인 경우 렌더링 요소에서 제거됨
+
+4. JavaScript Expressions
+```jsx
+{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+<div v-bind:id="`list-${id}`"></div>
+```
+- Vue는 모든 데이터 바인딩 내에서 JavaScript 표현식의 모든 기능을 지원
+- Vue 템플릿에서 JavaScript 표현식을 사용할 수 있는 위치
+    1. 콧수염 구문 내부
+    2. 모든 directive의 속성 값 (”v-”로 시작하는 특수 속성)
