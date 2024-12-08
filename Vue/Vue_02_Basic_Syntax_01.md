@@ -61,3 +61,21 @@
 - Vue는 class 및 style 속성 값을 v-bind로 사용할 때 객체 또는 배열을 활용하여 작성할 수 있도록 함
     
     → 단순히 문자열 연결을 사용하여 이러한 값을 생성하는 것은 번거롭고 오류가 발생하기가 쉽기 때문
+### Class and Style bindings가 가능한 경우
+
+1. Binding HTML Classes
+    
+    1.1 Binding to Objects
+    
+    1.2 Binding to Arrays
+    
+2. Binding Inline Styles
+    
+    2.1 Binding to Objects
+    
+    2.2 Binding to Arrays
+### 1.1 Binding HTML Classes - Binding to Objects
+
+- 객체를 :class에 전달하여 클래스를 동적으로 전환할 수 있음
+- 예시 1
+    - isActive의 Boolean 값에 의해 active 클래스의 존재가 결정됨
