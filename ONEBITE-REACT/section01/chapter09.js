@@ -42,4 +42,4 @@ switch (animal) {
         console.log("그런 동물은 모릅니다.")
     }
 }
-// switch는 모든 케이스에 breack가 들어가는 것이 일반적
+// switch는 모든 케이스에 break가 들어가는 것이 일반적
