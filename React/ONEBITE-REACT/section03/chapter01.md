@@ -1,4 +1,4 @@
-리액트를 공부하려는데 왜 node.js를 알아야 할까?
+### 리액트를 공부하려는데 왜 node.js를 알아야 할까?
 - React.js는 node.js를 기반으로 동작하는 기술이기 때문
 - 나중에 학습하게 될 Next.js나 Vue.js, Svelte 등 모두 node.js를 기반으로 동작하는 기술들
 
