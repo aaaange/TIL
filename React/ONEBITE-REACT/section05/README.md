@@ -946,7 +946,7 @@ const Register = ()=> {
                     <input 
                         value={birth}
                         type="date"
-                        onChangeBirth={onChangeBirth} />
+                        onChange={onChangeBirth} />
                 </div>
 
             </div>
@@ -988,12 +988,12 @@ const Register = ()=> {
                     <input 
                         value={birth}
                         type="date"
-                        onChangeBirth={onChangeBirth} />
+                        onChange={onChangeBirth} />
                 </div>
                 <div>
                     <select 
                         value={country}
-                        onChangeCountry={onChangeCountry}>
+                        onChange={onChangeCountry}>
                         <option></option>
                         <option>한국</option>
                         <option>미국</option>
@@ -1010,7 +1010,7 @@ const Register = ()=> {
     <div>
         <select 
             value={country}
-            onChangeCountry={onChangeCountry}>
+            onChange={onChangeCountry}>
             <option></option>
             <option value="kr">한국</option>
             <option>미국</option>
@@ -1046,12 +1046,12 @@ const Register = ()=> {
                     <input 
                         value={birth}
                         type="date"
-                        onChangeBirth={onChangeBirth} />
+                        onChange={onChangeBirth} />
                 </div>
                 <div>
                     <select 
                         value={country}
-                        onChangeCountry={onChangeCountry}>
+                        onChange={onChangeCountry}>
                         <option></option>
                         <option value="kr">한국</option>
                         <option value="us">미국</option>
@@ -1062,7 +1062,7 @@ const Register = ()=> {
                 <div>
                     <textarea 
                         value={bio}
-                        onChangeBio={onChangeBio}/>
+                        onChange={onChangeBio}/>
                 </div>
 
             </div>
