@@ -21,7 +21,7 @@ const [input, setInput] = useState({
     ```jsx
     const onChangeName = (e) => {
         setInput({
-            ...Input,
+            ...input,
             name : e.target.value
         })
     }
@@ -40,3 +40,48 @@ const [input, setInput] = useState({
     </div>
     ```
     - 나머지도 동일하게 수정
+- 제대로 잘 설정이 완료되었는지 확인하기 위해 console.log 작성
+    ```jsx
+    const [input, setInput] = useState({
+        name: "",
+        birth: "",
+        country: "",
+        bio: "",
+    })
+
+    console.log(input);
+    ```
+    - 스프레스 연산자를 통해 변경하려는 값만 변경되는 것을 볼 수 있음.
+    - 확인 다 했으면 콘솔로그 지우기
+### 이벤트 핸들러 묶어주기 (통합 이벤트 핸들러)
+- 통합 이벤트 핸들러 만들기
+    ```jsx
+    const onChange = (e) => {
+        setInput({
+            ...input,
+            [e.target.name]: e.target.value,
+        })
+    }
+    ```
+    - state와 마찬가지로 스프레드 문을 활용하여 다른 이벤트 핸들러는 유지되도록 설정하기.
+- 나머지 이벤트 핸들러 삭제
+- 리턴문의 인풋 속성에 name을 작성해주고 이벤트 핸들러의 함수를 수정해준다.
+    ```html
+    <div>
+        <input 
+            name="name"
+            value={input.name}
+            onChange={onChange} 
+            placeholder={"이름"} />
+    </div>
+    ```
+    - name 속성에는 input의 이름을 넣는다.
+    - 나머지 속성도 동일하게 수정
+#### 통합 이벤트 핸들러 설명
+1. 먼저 통합 이벤트 핸들러에 작성된 onChange라는 함수로 모든 이벤트 핸들러 함수를 수정해주었기에 어디에서 입력을 수정하든 onChange 함수가 실행이 됨.
+2. 함수가 실행되면 setInput이라는 함수가 실행되고, 객체로 스프레드 문인 `...input`은 기존에 input으로 받은 값들을 나열해준 다음 마지막에 프로퍼티의 키를 명시하는 자리에 [e.target.name]을 넣어줌.
+    - 자바스크립트의 문법으로 새로운 객체를 만들면서 프로퍼티의 키의 자리에 대괄호를 열고 변수의 이름을 작성하면 작성한 변수의 값이 프로퍼티의 키로 설정됨.
+    - e.target.name
+        - evnet가 발생한 값의 속성 값 중 name이 들어있음.
+        - 만약 생년월일을 수정한다면 event의 target은 Input 태그가 될 것이고, 그 타겟의 name은 birth가 되는 것.
+        - 즉, [e.target.name]은 birth가 되는 것이고 `birth: e.target.name`가 되는 것.
