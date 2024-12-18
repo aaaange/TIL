@@ -28,10 +28,21 @@ const mockData = [
 function App() {
   const [todos, setTodos] = useState(mockData);
 
+  const onCreate = (content) => {
+    const newTodo = {
+      id : 0,
+      isDone: false,
+      content: content,
+      date: new Date().getTime(),
+    }
+
+    setTodos([newTodo, ...todos]);
+  }
+
   return (
     <div className='App'>
       <Header />
-      <Editor />
+      <Editor onCreate={onCreate}/>
       <List />
     </div>
   )
