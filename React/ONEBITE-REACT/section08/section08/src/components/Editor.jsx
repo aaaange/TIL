@@ -18,7 +18,6 @@ const Editor = ({onCreate}) => {
                 value={content}
                 onChange={onChangeContent}
                 placeholder="새로운 Todo..." />
-            console.log(input.value)
             <button onClick={onSubmit}>추가</button>
         </div>
     )
