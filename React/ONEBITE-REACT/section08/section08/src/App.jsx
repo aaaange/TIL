@@ -35,7 +35,6 @@ function App() {
       content: content,
       date: new Date().getTime(),
     }
-    console.log(newTodo)
 
     setTodos([newTodo, ...todos]);
   }
