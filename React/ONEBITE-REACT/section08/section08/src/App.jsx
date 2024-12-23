@@ -3,6 +3,7 @@ import './App.css'
 import Editor from './components/Editor'
 import Header from './components/Header'
 import List from './components/List'
+import { useRef } from 'react'
 
 const mockData = [
   {
@@ -18,7 +19,7 @@ const mockData = [
     date: new Date().getTime(),
   },
   {
-    id: 3,
+    id: 2,
     isDone: false,
     content: "방 정리하기",
     date: new Date().getTime(),
@@ -27,10 +28,11 @@ const mockData = [
 
 function App() {
   const [todos, setTodos] = useState(mockData);
+  const idRef = useRef(3) // mockData 고려하여 3부터 시작
 
   const onCreate = (content) => {
     const newTodo = {
-      id : 0,
+      id : idRef.current ++,
       isDone: false,
       content: content,
       date: new Date().getTime(),

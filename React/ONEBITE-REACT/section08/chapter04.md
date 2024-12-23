@@ -104,3 +104,101 @@ const onCreate = (content) => {
     ```
 - 그럼 이제 추가를 누르면 state에 content가 들어감.
 - 그러나 현재 문제가 있다면 Id의 값이 0으로 나온다는 것.
+```jsx
+import { useRef } from 'react'
+```
+- 상단에 useRef를 import 하고 App 컴포넌트 안에 idRef 추가하기
+```jsx
+  const idRef = useRef(3) // mockData 고려하여 3부터 시작
+
+  const onCreate = (content) => {
+    const newTodo = {
+      id : idRef.current ++,
+      isDone: false,
+      content: content,
+      date: new Date().getTime(),
+    }
+  }
+```
+    - 데이터를 추가할 때마다 id 값을 증가시키기.
+## 디테일 수정
+### 빈 문자열을 입력했을 때 todo 추가하지 않기
+```jsx
+const onSubmit = () => {
+    if (content === "") {
+        return;
+    }
+    onCreate(content)
+}
+```
+- Editor.jsx 파일에서 onSubmit 함수에서 조건문을 추가하여 빈 상태라면 바로 return을 하여 onCreate 함수가 실행되지 않게 한다.
+- 추가적으로 input에 포커싱하기
+    ```jsx
+    import { useRef } from "react";
+
+    const contentRef = useRef();
+    ```
+    - useRef를 import하고 App 컴포넌트 안에 contentRef를 작성
+    ```jsx
+    return (
+        <div className="Editor">
+            <input 
+                ref={contentRef}
+                value={content}
+                onChange={onChangeContent}
+                placeholder="새로운 Todo..." />
+            <button onClick={onSubmit}>추가</button>
+        </div>
+    )
+    ```
+    - input의 속성 값으로 ref를 작성해주기
+    ```jsx
+        const onSubmit = () => {
+        if (content === "") {
+            contentRef.current.focus();
+            return;
+        }
+        onCreate(content)
+    }
+    ```
+    - onSubmit 함수에 contentRef에 포커스하도록 함.
+### 새로운 todo를 만들고 나서 input을 비워주기
+```jsx
+const onSubmit = () => {
+    if (content === "") {
+        contentRef.current.focus();
+        return;
+    }
+    onCreate(content)
+    setContent("")
+}
+```
+- onCreate 함수가 실행된 후 setContent를 실행해 content state를 빈 값으로 업데이트
+### Enter키를 눌러도 입력이 가능하게 하기
+```jsx
+const onKeydown = (e) => {
+
+}
+
+    return (
+    <div className="Editor">
+        <input 
+            ref={contentRef}
+            value={content}
+            onKeyDown={onKeydown}
+            onChange={onChangeContent}
+            placeholder="새로운 Todo..." />
+        <button onClick={onSubmit}>추가</button>
+    </div>
+)
+```
+- onKeydown이라는 새로운 이벤트 핸들러를 만들어주고, input 태그에 onKeydown이라는 이벤트 핸들러로 연결해주기.
+- onKeydown은 사용자가 어떤 키보드 키를 눌렀을 때 호출되는 이벤트 핸들러
+- onKeydown 이벤트 핸들러 함수에 조건문을 추가하여 엔터 키를 눌렀을 때 onSubmit 함수가 실행되도록 하기
+    ```jsx
+    const onKeydown = (e) => {
+        if (e.keyCode === 13) {
+            onSubmit();
+        }
+    }
+    ```
