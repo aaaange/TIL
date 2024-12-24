@@ -7,7 +7,6 @@ const Editor = ({onCreate}) => {
     const contentRef = useRef();
 
     const onChangeContent = (e) => {
-        console.log(e.target.value)
         setContent(e.target.value);
     }
 
