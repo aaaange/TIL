@@ -26,11 +26,13 @@ const Todoitem = ({id, isDone, content, date, onUpdate, onDelete}) => {
     )
 }
 
-export default memo(Todoitem, (prevProps, nextProps)=> {
-    if(prevProps.id !== nextProps.id) return false;
-    if(prevProps.isDone !== nextProps.isDone) return false;
-    if(prevProps.content !== nextProps.content) return false;
-    if(prevProps.date !== nextProps.date) return false;
+// export default memo(Todoitem, (prevProps, nextProps)=> {
+//     if(prevProps.id !== nextProps.id) return false;
+//     if(prevProps.isDone !== nextProps.isDone) return false;
+//     if(prevProps.content !== nextProps.content) return false;
+//     if(prevProps.date !== nextProps.date) return false;
 
-    return true; // 아무것도 바뀌지 않았다면 리렌더링 하지 마라
-});
+//     return true; // 아무것도 바뀌지 않았다면 리렌더링 하지 마라
+// });
+
+export default memo(Todoitem);
