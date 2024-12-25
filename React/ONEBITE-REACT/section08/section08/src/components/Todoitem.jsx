@@ -1,9 +1,13 @@
 import "./Todoitem.css"
 
-const Todoitem = ({id, isDone, content, date, onUpdate}) => {
+const Todoitem = ({id, isDone, content, date, onUpdate, onDelete}) => {
 
     const onChangeCheckbox = () => {
         onUpdate(id);
+    }
+
+    const onClickDeleteButton = () => {
+        onDelete(id)
     }
 
     return (
@@ -16,7 +20,7 @@ const Todoitem = ({id, isDone, content, date, onUpdate}) => {
             />
             <div className="content">{content}</div>
             <div className="date">{new Date(date).toLocaleDateString()}</div>
-            <button>X</button>
+            <button onClick={onClickDeleteButton}>X</button>
         </div>
     )
 }
