@@ -110,4 +110,3 @@ interface User {
 ```
 - 이제 성적은 위에 선언해놓은 값 외에는 입력할 수 없게 됨.
 ## interface로 함수 정의하기
-- interface function이란?
