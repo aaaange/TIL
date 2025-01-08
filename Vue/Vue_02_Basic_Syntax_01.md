@@ -79,3 +79,10 @@
 - 객체를 :class에 전달하여 클래스를 동적으로 전환할 수 있음
 - 예시 1
     - isActive의 Boolean 값에 의해 active 클래스의 존재가 결정됨
+        ```html
+        <!-- bindign-html-classes.html -->
+        const isActive = ref(false)
+        ```
+        ```html
+        <div :class="{ active: isActive }">Text</div>
+        ```
