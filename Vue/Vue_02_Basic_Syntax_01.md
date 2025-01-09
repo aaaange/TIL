@@ -86,3 +86,15 @@
         ```html
         <div :class="{ active: isActive }">Text</div>
         ```
+- 객체에 더 많은 필드를 포함하여 여러 클래스를 전환할 수 있음
+- 예시 2
+    - :class direcctive를 일반 클래스 속성과 함께 사용 가능
+
+        ```jsx
+        const isActive = ref(false)
+        const hasInfo = ref(true)
+        ```
+
+        ```html
+        <div class="static" :class="{ active: isActive, 'text-primary':hasInfo}">Text</div>
+        ```
