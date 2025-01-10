@@ -98,3 +98,18 @@
         ```html
         <div class="static" :class="{ active: isActive, 'text-primary':hasInfo}">Text</div>
         ```
+- 반드시 inline 방식으로 작성하지 않아도 됨
+- 반응형 변수를 활용해 객체를 한번에 작성하는 방법
+    ```jsx
+    const isActive = ref(false)
+    const hasInfo = ref(ture)
+    // ref는 반응 객체의 속성으로 엑세스되거나 변경될 때 자동으로 unwrap
+    const classObj = ref({
+        active: isActive,
+        'text-primary': hasInfo
+    })
+    ```
+
+    ```jsx
+    <div class="static" :class="classObj">Text</div>
+    ```
