@@ -113,3 +113,14 @@
     ```jsx
     <div class="static" :class="classObj">Text</div>
     ```
+### 1.2 Binding HTML Classes - Binding to Arrays
+- :class를 배열에 바인딩하여 클래스 목록을 적용할 수 있음
+- 예 1
+    ```js
+    const isActiveClass = ref("active")
+    const infoClass = ref("text-primary")
+    ```
+    ```html
+    <div class="[isActiveClass, infoClass]">Text</div>
+    ```
+    
