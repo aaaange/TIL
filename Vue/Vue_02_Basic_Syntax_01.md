@@ -123,4 +123,8 @@
     ```html
     <div class="[isActiveClass, infoClass]">Text</div>
     ```
-    
+- 배열 구문 내에서 객체 구문을 사용하는 경우
+- 예시 2
+    ```js
+    <div class="[{active: isActive}, infoClass]">Text</div>
+    ```
