@@ -128,3 +128,13 @@
     ```js
     <div class="[{active: isActive}, infoClass]">Text</div>
     ```
+### 1.2 Binding Inline Styles - Binding to Objects
+- :style은 JavaScript 객체 값에 대한 바인딩을 지원 (HTML style 속성에 해당)
+- 예시 1
+    ```js
+    const activeColor = ref('crimson')
+    const fontSize = ref(50)
+    ```
+    ```html
+    <div :style="{color: activeColor, fontSize: fontSize + 'px'}">Text</div>
+    ```
