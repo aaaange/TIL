@@ -125,7 +125,7 @@
     ```
 - 배열 구문 내에서 객체 구문을 사용하는 경우
 - 예시 2
-    ```js
+    ```html
     <div class="[{active: isActive}, infoClass]">Text</div>
     ```
 ### 1.2 Binding Inline Styles - Binding to Objects
@@ -137,4 +137,9 @@
     ```
     ```html
     <div :style="{color: activeColor, fontSize: fontSize + 'px'}">Text</div>
+    ```
+- 실제 CSS에서 사용하는 것처럼 :style은 kebab-cased 키 문자열도 지원 (단, camelCase 작성을 권장)
+- 예시 2
+    ```html
+    <div :style="{ 'fontSize': fontSize + 'px'}">Text</div>
     ```
