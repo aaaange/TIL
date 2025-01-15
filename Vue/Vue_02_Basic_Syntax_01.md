@@ -143,3 +143,16 @@
     ```html
     <div :style="{ 'fontSize': fontSize + 'px'}">Text</div>
     ```
+- 반드시 inline 방식으로 작성하지 않아도 됨
+- 반응형 변수를 활용해 객체를 한번에 작성하는 방법
+- 예시 3
+    ```js
+    const styleObj = ref({
+        color: activeColor,
+        fontSize: fontSize.value + 'px'
+    })
+    ```
+    ```html
+    <div :style="styleObj">Text</div>
+    ```
+    - .value 잊지 않고 넣어주기⭐️
