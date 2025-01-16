@@ -128,7 +128,7 @@
     ```html
     <div class="[{active: isActive}, infoClass]">Text</div>
     ```
-### 1.2 Binding Inline Styles - Binding to Objects
+### 2.1 Binding Inline Styles - Binding to Objects
 - :style은 JavaScript 객체 값에 대한 바인딩을 지원 (HTML style 속성에 해당)
 - 예시 1
     ```js
@@ -156,3 +156,16 @@
     <div :style="styleObj">Text</div>
     ```
     - .value 잊지 않고 넣어주기⭐️
+### 2.2 Binding Inline Styles - Binding to Arrays
+- 여러 스타일 객체를 배열에 작성해서 :style을 바인딩할 수 있음
+- 작성한 객체는 병합되어 동일한 요소에 적용
+- 예시 3
+    ```js
+    const styleObj2 = ref({
+        color: 'blue',
+        border: '1px solid black'
+    })
+    ```
+    ```html
+    <div :style="[styleObj, styleObj2]">Text</div>
+    ```
