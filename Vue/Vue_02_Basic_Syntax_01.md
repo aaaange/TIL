@@ -169,3 +169,24 @@
     ```html
     <div :style="[styleObj, styleObj2]">Text</div>
     ```
+## Event Handling
+### v-on
+#### v-on
+- DOM 요소에 이벤트 리스너를 연결 및 수신
+#### v-on 구성
+```
+v-on:submit.prevent="onSubmit"
+```
+- `v-on` : Name
+- `submit` : Argument
+- `prevent` : Modifiers
+- `onSubmit` : Value
+##### `v-on:event=”handler”` 
+
+- handler 종류
+    1. iniline handlers : 이벤트가 트리거가 될 때 실행 될 JavaScript 코드
+    2. Method handlers : 컴포넌트에 정의된 메서드 이름
+- v-on shorthand (약어)
+    - ‘@’
+        
+        `@event=”handler”`
