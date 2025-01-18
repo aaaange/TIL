@@ -190,3 +190,14 @@ v-on:submit.prevent="onSubmit"
     - ‘@’
         
         `@event=”handler”`
+### 1. Inline handlers
+- Inline handlers는 주로 간단한 상황에 사용
+```js
+const count = ref(0)
+```
+```html
+<button> @click="count++">Add 1</button>
+<p>Count: {{ count }}</p>
+```
+- 간단한 상황에서 사용
+- 메서드로 만들어서 사용하는 것이 유지보수가 좋음
