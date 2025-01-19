@@ -201,3 +201,16 @@ const count = ref(0)
 ```
 - 간단한 상황에서 사용
 - 메서드로 만들어서 사용하는 것이 유지보수가 좋음
+#### Inline Handlers에서의 메서드 호출
+- 메서드 이름에 직접 바인딩하는 대신 Inline Handlers에서 메서드를 호출할 수도 있음
+- 이렇게 하면 기본 이벤트 대신 사용자 지정 인자를 전달할 수 있음
+```js
+const greeting = function (message) {
+    console.log(message)
+}
+```
+```html
+<button @click = 'greeting("hello")'>Say hello</button>
+<button @click = 'greeting("bye")'>Say bye</button>
+```
+- 인라인 핸들러를 메서드 핸들러로 만들기
