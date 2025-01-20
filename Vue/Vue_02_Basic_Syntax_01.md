@@ -214,3 +214,18 @@ const greeting = function (message) {
 <button @click = 'greeting("bye")'>Say bye</button>
 ```
 - 인라인 핸들러를 메서드 핸들러로 만들기
+#### Inline Handlers에서의 event 인자에 접근하기
+- Inline Handlers에서 원래 DOM 이벤트에 접근하기
+- $event 변수를 사용하여 메서드에 전달
+```js
+const warning = function (message, event) {
+    console.log(message)
+    console.log(event)
+}
+```
+```html
+<button @click="warning('경고입니다.', $event)">Submit</button>
+```
+- `$evnet` 달러 접두어 : 글로벌 변수라는 뜻. 우리가 만든 변수가 아니라 내장된 변수
+    - 일반 변수들과 구분을 하기 위함
+    - 클릭을 했을 때 발생하는 이벤트를 뜻함. 위치는 ‘경고입니다’ 앞에 쓰든 뒤에 쓰든 상관 x
