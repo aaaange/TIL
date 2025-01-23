@@ -240,4 +240,6 @@ const myFunc = function(event) {
     console.log(`Hello ${name.value}`)
 } 
 ```
-
+```html
+<button @click="myFunc">Hello</button>
+```
