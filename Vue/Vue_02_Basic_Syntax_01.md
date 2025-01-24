@@ -243,3 +243,13 @@ const myFunc = function(event) {
 ```html
 <button @click="myFunc">Hello</button>
 ```
+- Method Handlers는 이를 트리거하는 기본 DOM Event 객체를 자동으로 수신
+```js
+const name = ref('Alice')
+const myFunc = function(event) {
+    console.log(event)
+    console.log(event.currentTarget)
+    console.log(`Hello ${name.value}`)
+} 
+```
+- 인자를 지정해주지 않는다면, 이벤트 객체를 자동으로 수신
