@@ -253,3 +253,11 @@ const myFunc = function(event) {
 } 
 ```
 - 인자를 지정해주지 않는다면, 이벤트 객체를 자동으로 수신
+## Modifiers
+### Evnet Modifiers
+- Event Modifiers를 활용해 event.preventDefault()와 같은 구문을 메서드에 작성하지 않도록 함
+- stop, prevent, self 등 다양한 modifiers를 제공
+    - → 메서드는 DOM 이벤트에 대한 처리보다는 데이터에 관한 논리를 작성하는 것에 집중할 것
+    - `<form @submit.prevent=”onSubmit”>…</form>` 
+    - `<a @click.stop.prevent=”onLink”>…</a>` 
+    - Modifiers는 chained 되게끔 작성할 수 있으며 이때는 작성된 순서로 실행되기 때문에 작성 순서에 유의
