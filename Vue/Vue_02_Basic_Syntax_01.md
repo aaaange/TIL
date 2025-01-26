@@ -261,3 +261,9 @@ const myFunc = function(event) {
     - `<form @submit.prevent=”onSubmit”>…</form>` 
     - `<a @click.stop.prevent=”onLink”>…</a>` 
     - Modifiers는 chained 되게끔 작성할 수 있으며 이때는 작성된 순서로 실행되기 때문에 작성 순서에 유의
+### Key Modifiers
+- 키보드 이벤트를 수신할 때 특정 키에 관한 별도 modifiers를 사용할 수 있음
+- 예시
+    - key가 enter 일 때만 onSubmit 이벤트를 호출하기
+    - `<input @keyup.enter=”onSubmit”>` 
+- → input에서 enter를 눌렀을 때만 호출이 됨
