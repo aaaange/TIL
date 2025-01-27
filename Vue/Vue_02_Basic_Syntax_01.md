@@ -267,3 +267,13 @@ const myFunc = function(event) {
     - key가 enter 일 때만 onSubmit 이벤트를 호출하기
     - `<input @keyup.enter=”onSubmit”>` 
 - → input에서 enter를 눌렀을 때만 호출이 됨
+### v-on 종합
+[Vue.js](https://vuejs.org/guide/essentials/event-handling)
+## Form Input Bindings
+입력값을 동적으로 추적할 수 있어야 백엔드에서 반응형 데이터를 동기화할 수 있음
+### Form Input Bindings (폼 입력 바인딩)
+- form을 처리할 때 사용자가 input에 입력하는 값을 실시간으로 JavaScript 상태에 동기화 해야 하는 경우 (양방향 바인딩)
+- 양방향 바인딩 방법
+    1. v-bind와 v-on을 함께 사용
+    2. v-model 사용
+- 두가지 다 같은 방식인데 표현이 조금 다름
