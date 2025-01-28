@@ -277,3 +277,20 @@ const myFunc = function(event) {
     1. v-bind와 v-on을 함께 사용
     2. v-model 사용
 - 두가지 다 같은 방식인데 표현이 조금 다름
+## v-bind with v-on
+### 1. v-bind와 v-on을 함께 사용
+1. v-bind를 사용하여 input 요소의 value 속성 값을 입력 값으로 사용
+2. v-on을 사용하여 input 이벤트가 발생 할 때마다 input 요소의 value 값을 별도 반응형 변수에 저장하는 핸들러를 호출
+```js
+const inputText1 = ref('')
+const onInput = function (event) {
+    inputText1.value = event.currentTarget.value
+}
+```
+```html
+<p>{{ inputText1 }}</p>
+<input :value="inputText1" @input="onInput">
+```
+- v-bind, v-on 둘 다 사용
+- `@input=”onInput”` 
+- 인풋할때마다 onlnput함수를 발동시켜서 이벤트가 활성화된 현재 타겟의 값을 inputText1에 할당
