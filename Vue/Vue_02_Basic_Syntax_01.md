@@ -294,3 +294,8 @@ const onInput = function (event) {
 - v-bind, v-on 둘 다 사용
 - `@input=”onInput”` 
 - 인풋할때마다 onlnput함수를 발동시켜서 이벤트가 활성화된 현재 타겟의 값을 inputText1에 할당
+## v-model
+### v-model
+- form input 요소 또는 컴포넌트에서 양방향 바인딩을 만듦
+### 2. v-model 사용
+- 사용자 입력 데이터와 반응형 변수를 실시간 동기화
