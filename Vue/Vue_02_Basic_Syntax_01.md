@@ -299,3 +299,10 @@ const onInput = function (event) {
 - form input 요소 또는 컴포넌트에서 양방향 바인딩을 만듦
 ### 2. v-model 사용
 - 사용자 입력 데이터와 반응형 변수를 실시간 동기화
+```js
+const inputText2 = ref('')
+```
+```html
+<p>{{ inputText2 }}</p>
+<input v-model="inputText2">
+```
