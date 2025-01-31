@@ -306,3 +306,7 @@ const inputText2 = ref('')
 <p>{{ inputText2 }}</p>
 <input v-model="inputText2">
 ```
+- 빈 문자열을 준비하고, v-model에 그 빈 문자열을 속성 값에 넣어주기.
+- 아까와 동일하게 동작함을 볼 수 있음 — 양방향 바인딩
+- → IME가 필요한 언어(한국어, 중국어, 일본어 등)의 경우 v-model이 제대로 업데이트되지 않음
+- → 해당 언어에 대해 올바르게 응답하려면 v-bind와 v-on 방법을 사용해야 함
