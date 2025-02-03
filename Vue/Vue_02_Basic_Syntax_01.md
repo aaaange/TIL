@@ -316,3 +316,8 @@ const inputText2 = ref('')
 ## v-model 활용
 ### v-model과 다양한 입력(input) 양식
 - v-model은 단순 Text input 뿐만 아니라 Checkbox, Radio, Select 등 다양한 타입의 사용자 입력 방식과 함께 사용 가능
+### Checkbox 활용
+1. 단일 체크 박스와 boolean 값 활용
+```js
+const checked = ref(false)
+```
