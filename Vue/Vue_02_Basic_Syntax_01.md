@@ -321,3 +321,7 @@ const inputText2 = ref('')
 ```js
 const checked = ref(false)
 ```
+```html
+<input type="checkbox" id="checkbox" v-model="checked">
+<label for="checkbox">{{ checked }}</label>
+```
