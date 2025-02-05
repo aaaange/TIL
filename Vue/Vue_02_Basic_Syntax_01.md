@@ -325,3 +325,6 @@ const checked = ref(false)
 <input type="checkbox" id="checkbox" v-model="checked">
 <label for="checkbox">{{ checked }}</label>
 ```
+2. 여러 체크박스와 배열 활용
+    - 해당 배열에는 현재 선택된 체크박스의 값이 포함됨
+    - 빈 배열을 하나 만들어주기
