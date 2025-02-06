@@ -328,3 +328,5 @@ const checked = ref(false)
 2. 여러 체크박스와 배열 활용
     - 해당 배열에는 현재 선택된 체크박스의 값이 포함됨
     - 빈 배열을 하나 만들어주기
+### Select 활용
+- select에서 v-model 표현식의 초기 값이 어떤 option과도 일치하지 않는 경우 select 요소는 “선택되지 않는(unselected)” 상태로 렌더링 됨
