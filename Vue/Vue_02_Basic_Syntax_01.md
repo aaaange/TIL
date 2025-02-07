@@ -330,3 +330,15 @@ const checked = ref(false)
     - 빈 배열을 하나 만들어주기
 ### Select 활용
 - select에서 v-model 표현식의 초기 값이 어떤 option과도 일치하지 않는 경우 select 요소는 “선택되지 않는(unselected)” 상태로 렌더링 됨
+```js
+const selected = ref('')
+```
+```html
+<div>Selected: {{ selected }}</div>
+
+<select v-model="selected">
+    <option disable value="">Please select one</option>
+    <option>one</option>
+    <option>two</option>
+    <option>three</option>
+```
