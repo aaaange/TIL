@@ -342,3 +342,10 @@ const selected = ref('')
     <option>two</option>
     <option>three</option>
 ```
+- select의 특징은 option과 함께 쓰임
+# 참고
+## 접두어 $
+### ‘$’ 접두어가 붙은 변수
+- Vue 인스턴스 내에서 제공되는 내부 변수
+- → 사용자가 지정한 반응형 변수나 메서드와 구분하기 위함
+- → 주로 Vue 인스턴스 내부 상태를 다룰 때 사용
