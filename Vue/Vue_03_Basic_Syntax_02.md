@@ -22,3 +22,11 @@ const todos = ref([
 - → 템플릿이 복잡해지며 todos에 따라 계산을 수행하게 됨
 - → 만약 이 계산을 템플릿에 여러 번 사용하는 경우에는 반복이 발생함
 - 그렇다면 현재 todos에 대한 계산을 미리 해두고 변동이 없다면 굳이 템플릿을 사용할 때마다 계산할 필요가 없지 않은가?
+```js
+const { createApp, ref, computed } = Vue
+```
+```js
+const restOfTodos = computed(() => { // computed() 값은 객체
+    return todos.value.length > 0 ? '미완료' : '모두 완료'
+})
+```
