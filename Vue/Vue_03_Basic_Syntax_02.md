@@ -30,3 +30,7 @@ const restOfTodos = computed(() => { // computed() 값은 객체
     return todos.value.length > 0 ? '미완료' : '모두 완료'
 })
 ```
+```html
+<h2>남은 할 일</h2>
+<p>{{ restOfTodos }}</p>
+```
