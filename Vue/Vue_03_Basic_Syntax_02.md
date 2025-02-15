@@ -34,3 +34,5 @@ const restOfTodos = computed(() => { // computed() 값은 객체
 <h2>남은 할 일</h2>
 <p>{{ restOfTodos }}</p>
 ```
+- computed 적용 후
+- 반응형 데이터를 포함하는 복잡한 로직의 경우 computed를 활용하여 미리 값을 계산하여 계산된 값을 사용
