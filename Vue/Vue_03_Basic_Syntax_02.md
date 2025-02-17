@@ -43,3 +43,6 @@ const restOfTodos = computed(() => { // computed() 값은 객체
 - 의존하는 데이터가 변경될 때만 재평가
     - restOfTodos의 계산은 todos에 의존하고 있음
     - 따라서 todos가 변경될 때만 restOfTodos가 업데이트 됨
+## Computed vs. Methods
+### computed와 동일한 로직을 처리할 수 있는 method
+- computed 속성 대신 method로도 동일한 기능을 정의할 수 있음
