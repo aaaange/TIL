@@ -72,3 +72,10 @@ const restOfTodos = computed(() => { // computed() 값은 객체
 - method
     - 단순히 특정 동작을 수행하는 함수를 정의할 때 사용
     - 데이터에 의존하는지 여부와 관계없이 항상 동일한 결과를 반환하는 함수
+
+### method와 computed 정리
+- computed
+    - 의존된 데이터가 변경되면 자동으로 업데이트
+- method
+    - 호출 해야만 실행됨
+- → 무조건 computed만 사용하는 것이 아니라 사용 목적과 상황에 맞게 computed와 method를 적절히 조합하여 사용
