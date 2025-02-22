@@ -79,3 +79,11 @@ const restOfTodos = computed(() => { // computed() 값은 객체
 - method
     - 호출 해야만 실행됨
 - → 무조건 computed만 사용하는 것이 아니라 사용 목적과 상황에 맞게 computed와 method를 적절히 조합하여 사용
+
+### computed 주의사항
+computed를 잘 못 사용하는 경우가 존재함
+- computed는 말그대로 의존된 데이터를 기준으로 자동으로 변경되는 결과 값
+- 잘못 쓰는 사람들은 이 computed(결과 값)을 변경하려고 시도하는 경우가 있음
+    - computed를 다른 곳에 사용하고 자
+    - 이런 경우 경고가 발생한다.
+- 쉽게 생각하자면 computed는 읽기 전용 값임
