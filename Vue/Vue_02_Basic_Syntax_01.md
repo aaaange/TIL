@@ -229,3 +229,15 @@ const warning = function (message, event) {
 - `$evnet` 달러 접두어 : 글로벌 변수라는 뜻. 우리가 만든 변수가 아니라 내장된 변수
     - 일반 변수들과 구분을 하기 위함
     - 클릭을 했을 때 발생하는 이벤트를 뜻함. 위치는 ‘경고입니다’ 앞에 쓰든 뒤에 쓰든 상관 x
+
+### 2. Method Handlers
+- Inline handlers로는 불가능한 대부분의 상황에서 사용
+```js
+const name = ref('Alice')
+const myFunc = function(event) {
+    console.log(event)
+    console.log(event.currentTarget)
+    console.log(`Hello ${name.value}`)
+} 
+```
+
