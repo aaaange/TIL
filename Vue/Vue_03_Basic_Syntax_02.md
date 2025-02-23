@@ -87,3 +87,14 @@ computed를 잘 못 사용하는 경우가 존재함
     - computed를 다른 곳에 사용하고 자
     - 이런 경우 경고가 발생한다.
 - 쉽게 생각하자면 computed는 읽기 전용 값임
+```js
+// computed 주의사항
+const a = ref(0)
+const abc = computed(() => {
+  return a.value + 1
+})
+console.log(abc.value) // 1
+// computed는 읽기 전용이기 때문에 아래 코드는 경고가 발생한다.
+// Write operation failed: computed value is readonly
+console.log(abc.value++) // 1
+```
