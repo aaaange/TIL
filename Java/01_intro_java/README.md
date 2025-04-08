@@ -9,3 +9,10 @@
 | 날짜 | 진도 | 주제 | 요약 |
 |------|------|------|------|
 |  |  |  |   |
+
+
+## 📖 목차
+1. Section 01 OT
+    1. [강의 소개](TIL\Java\01_intro_java\Section_01_OT\01_강의소개.md)
+2. Section 02 Hello World
+    1. [개발 환경 설정](TIL\Java\01_intro_java\Section_02_Hello_World\01_개발_환경_설정.md)
