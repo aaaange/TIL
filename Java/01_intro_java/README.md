@@ -36,3 +36,4 @@
 - `sout` 
     - `soutv`
 - `win + F5` : 실행
+- `Shift + cmd + enter` : 세미콜론 자동 완성
