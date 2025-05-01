@@ -98,3 +98,17 @@ console.log(abc.value) // 1
 // Write operation failed: computed value is readonly
 console.log(abc.value++) // 1
 ```
+# Conditional Rendering
+## v-if
+표현식 값의 true/false를 기반으로 요소를 조건부로 렌더링
+- ‘v-if’ directive를 사용하여 조건부로 렌더링
+```html
+<!-- conditional-rendering.html -->
+const isSeen = ref(true)
+
+<!-- if else -->
+<p v-if="isSeen">true일때 보여요</p>
+<p v-else>false일때 보여요</p>
+<button @click="isSeen = !isSeen">토글</button> 
+<!-- 토글 버튼을 클릭할 때마다 isSeen의 값을 역으로 바꾸기 -->
+```
