@@ -112,3 +112,22 @@ const isSeen = ref(true)
 <button @click="isSeen = !isSeen">토글</button> 
 <!-- 토글 버튼을 클릭할 때마다 isSeen의 값을 역으로 바꾸기 -->
 ```
+## v-else
+- ‘v-else’ directive를 사용하여 v-if에 대한 else 블록을 나타낼 수 있음
+```html
+<!-- else if -->
+<div v-if="name === 'Alice'">Alice입니다</div>
+<div v-else-if="name === 'Bella'">Bella입니다</div>
+<div v-else-if="name === 'Cathy'">Cathy입니다</div>
+<div v-else>아무도 아닙니다.</div>
+```
+## 여러 요소에 대한 v-if 적용
+- HTML template 요소에 v-if를 사용하여 하나 이상의 요소에 대해 적용할 수 있음 ( v-else, v-else-if 모두 적용 가능)
+```html
+<!-- v-if on <template> -->
+<template v-if="name==='Cathy'"> 
+  <div>Cathy입니다</div>
+  <div>나이는 30살입니다</div>
+</template>
+```
+- 레이아웃을 해치지 않는데 if를 묶어줄 수 있는 태그 = template
